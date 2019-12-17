@@ -15,12 +15,12 @@ $(function(){
             newB += '<button class="devourIt" data-id="'+burgers[i].id+'" data-status="'+!burgers[i].devoured+'">'
 
             if(burgers[i].devoured){
-                newB += "Save"
+                newB += '<i class="fa fa-thumbs-up" aria-hidden="true"></i>'
             }else{
                 newB +="Devour"
             }
             newB+='</button>'
-            newB += '<button class="deleteIt" data-id="'+burgers[i].id+'">Delete</button>'+'</li>';
+            newB += '<button class="deleteIt" data-id="'+burgers[i].id+'"><i class="fa fa-trash" aria-hidden="true"></i></button>'+'</li>';
 
             if(burgers[i].devoured){
                 devouredBurgers.append(newB);
