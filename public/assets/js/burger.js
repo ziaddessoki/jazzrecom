@@ -65,7 +65,29 @@ $(function(){
       });
 
 
-
+      $(".create-form").on("submit", function(event) {
+        // Make sure to preventDefault on a submit event.
+        event.preventDefault();
+    
+        var newBur = {
+            burger_name: $("#bur")
+            .val()
+            .trim()
+        };
+    
+        // Send the POST request.
+        $.ajax("/burgers", {
+          type: "POST",
+          data: JSON.stringify(newBur),
+          dataType:'json',
+          contentType: 'application/json'
+        }).then(function() {
+          console.log("created new burger!");
+          // Reload the page to get the updated list
+          location.reload();
+        });
+      });
+     
 
 
 
