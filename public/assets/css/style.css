@@ -55,10 +55,11 @@ li{
 
 .save{
     float: left;
-    margin-left: 80px;
+    margin: auto;
 }
 
 .devour{
     float: right;
-    margin-right: 80px;
+    /* margin-right: 80px; */
+    margin: auto;
 }
